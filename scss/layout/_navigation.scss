@@ -1,0 +1,28 @@
+.nav {
+	display: inline-block;
+	margin: 0 3rem;
+
+	&__nav-item {
+		display: inline-block;
+		margin: 0 1rem;
+
+		&--dropdown {
+			position: relative;
+		}
+	}
+
+	&__nav-link {
+		color: $white;
+		font-size: $nav-font-size;
+		text-decoration: none;
+		padding: .9rem 1.3rem;
+		display: block;
+
+		&:hover {
+			background: darken($primary-color, 10%);
+			@include border-radius(.5rem);
+			@include box-shadow(0, .3rem, 0, 0, darken($primary-color, 20%));
+
+		}
+	}
+}

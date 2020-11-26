@@ -1,0 +1,53 @@
+// Placeholder
+// @mixin placeholder {
+// 	&::-webkit-input-placeholder {
+// 		@content;
+// 	}
+
+// 	&:-moz-placeholder {
+// 		@content;
+// 	}
+
+// 	&::-moz-placeholder {
+// 		@content;
+// 	}
+
+// 	&:-ms-input-placeholder {
+// 		@content;
+// 	}
+// }
+
+// //	Visually hidden
+// @mixin visually-hidden() {
+// 	border: 0;
+// 	clip: rect(0 0 0 0);
+// 	height: .1rem;
+// 	margin: -.1rem;
+// 	overflow: hidden;
+// 	padding: 0;
+// 	position: absolute;
+// 	width: .1rem;
+// }
+
+// // Hover
+// @mixin hover {
+// 	@media only screen and (min-width: 1025px) {
+// 		.no-touch &:hover {
+// 			@content;
+// 		}
+// 	}
+// }
+
+
+
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	  -moz-border-radius: $radius;
+					border-radius: $radius;
+ }
+
+ @mixin box-shadow( $horiz, $vert, $blur, $spread, $color) {
+	-webkit-box-shadow: $horiz $vert $blur $spread $color;
+		 -moz-box-shadow: $horiz $vert $blur $spread $color;
+					 box-shadow: $horiz $vert $blur $spread $color;
+ }

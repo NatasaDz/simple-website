@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Simple Website</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="robots" content="noindex, nofollow">
+
+	<!-- Bootstrap for carousel -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Icons -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+		integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
+
+	<!-- Main stylesheet -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+	<!-- Header -->
+	<header class="header">
+		<h1 class="header__logo">
+			<a class="header__link" href="index.html">page logo</a>
+		</h1>
+
+		<nav class="nav">
+			<ul class="nav__nav-wrapper">
+				<li class="nav__nav-item">
+					<a class="nav__nav-link" href="#">about</a>
+				</li>
+				<li class="nav__nav-item nav__nav-item--dropdown">
+					<a class="nav__nav-link" href="#" onclick="toggle();"><img class="nav__arrow nav__arrow--down" src="./imgs/menu-arrow-down.png"
+							alt="arrow-down">projects</a>
+
+					<div class="nav__dropdown">
+						<a href="#" class="nav__nav-link">
+							<img class="nav__arrow nav__arrow--right" src="./imgs/menu-arrow-right.png" alt="arrow-right">project 1</a>
+						<a class="nav__nav-link" href="#">
+							<img class="nav__arrow nav__arrow--right" src="./imgs/menu-arrow-right.png" alt="arrow-right">project 2</a>
+						<a class="nav__nav-link" href="#">
+							<img class="nav__arrow nav__arrow--right" src="./imgs/menu-arrow-right.png" alt="arrow-right">project 3</a>
+					</div>
+				</li>
+				<li class="nav__nav-item">
+					<a href="#" class="nav__nav-link">news</a>
+				</li>
+				<li class="nav__nav-item">
+					<a href="#" class="nav__nav-link">contact</a>
+				</li>
+			</ul>
+		</nav>
+
+		<div class="header__search">
+			<i class="header__search-icon fas fa-search fa-2x"></i>
+			<input class="header__search-input" type="text" name="search" placeholder="Search...">
+		</div>
+	</header>
+	<!-- End Header Section -->
+
+	<!-- Banner Section -->
+	<section id="myCarousel" class="carousel slide" data-ride="carousel">
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner">
+			 <div class="item active">
+				  <img src="./imgs/hero-img1.jpg" alt="hero image" class="carousel-img">
+				  <div class="carousel-title">
+						<h2 class="main-title">lorem ipsum dolor sit amet</h2>
+						<span>Vestibulum gravida nisl orci, ut sollicitudin urna hendrerit at. Vestibulum feugiat.</span>
+				  </div>
+			 </div>
+
+			 <div class="item">
+				  <img src="./imgs/hero-img2.jpg" alt="hero image" class="carousel-img">
+				  <div class="carousel-title">
+						<h2 class="main-title">lorem ipsum dolor sit amet</h2>
+						<span>Vestibulum gravida nisl orci, ut sollicitudin urna hendrerit at. Vestibulum feugiat.</span>
+				  </div>
+			 </div>
+
+			 <div class="item">
+				  <img src="./imgs/hero-img3.png" alt="hero image" class="carousel-img">
+				  <div class="carousel-title">
+						<h2 class="main-title">lorem ipsum dolor sit amet</h2>
+						<span>Vestibulum gravida nisl orci, ut sollicitudin urna hendrerit at. Vestibulum feugiat.</span>
+				  </div>
+			 </div>
+		</div>
+
+		<!-- Left and right controls -->
+		<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+			 <img src="./imgs/arrow-left.png" alt="arrow left">
+		</a>
+
+		<a class="right carousel-control" href="#myCarousel" data-slide="next">
+			 <img src="./imgs/arrow-right.png" alt="arrow right">
+		</a>
+
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			 <li data-target="#myCarousel" data-slide-to="1"></li>
+			 <li data-target="#myCarousel" data-slide-to="2"></li>
+		</ol>
+  </section>
+	<!-- End Banner Section -->
+
+	<!-- News section -->
+	<section class="news">
+		<div class="news__box">
+			<i class="fas fa-film fa-5x"></i>
+			<h3 class="news__title">vestibulum</h3>
+			<p class="news__text">Morbi et leo ac eros elementum dictum vitae ac lorem. Vivamus sit amet elit vitae ipsum
+				dapibus tincidunt.</p>
+			<a class="news__btn" href="#">see more</a>
+		</div>
+
+		<div class="news__box">
+			<i class="fab fa-fly fa-5x"></i>
+			<h3 class="news__title">vestibulum</h3>
+			<p class="news__text">Morbi et leo ac eros elementum dictum vitae ac lorem. Vivamus sit amet elit vitae ipsum
+				dapibus tincidunt.</p>
+			<a class="news__btn" href="#">see more</a>
+		</div>
+
+		<div class="news__box">
+			<i class="far fa-lightbulb fa-5x"></i>
+			<h3 class="news__title">vestibulum</h3>
+			<p class="news__text">Morbi et leo ac eros elementum dictum vitae ac lorem. Vivamus sit amet elit vitae ipsum
+				dapibus tincidunt.</p>
+			<a class="news__btn" href="#">see more</a>
+		</div>
+
+		<div class="news__box">
+			<i class="far fa-star fa-5x"></i>
+			<h3 class="news__title">vestibulum</h3>
+			<p class="news__text">Morbi et leo ac eros elementum dictum vitae ac lorem. Vivamus sit amet elit vitae ipsum
+				dapibus tincidunt.</p>
+			<a class="news__btn" href="#">see more</a>
+		</div>
+	</section>
+	<!-- End News Section -->
+
+	<script src="./js/main.js"></script>
+</body>
+
+</html>

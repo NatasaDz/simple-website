@@ -1,0 +1,30 @@
+.header {
+	background: $primary-color;
+	padding: $padding-vertical $padding-global;
+	text-transform: uppercase;
+
+	&__logo {
+		display: inline-block;
+	}
+
+	&__link {
+		color: $white;
+		font-size: 1.75rem;
+		text-decoration: none;
+		font-weight: bold;
+	}
+
+	&__search {
+		float: right;
+		padding-top: .7rem;
+		cursor: pointer;
+		position: relative;
+	}
+
+	&__search-icon {
+		position: absolute;
+		transform: translate(-150%, 0);
+		color: $primary-color;
+		z-index: 1;
+	}
+}

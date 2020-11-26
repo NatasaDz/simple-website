@@ -1,0 +1,60 @@
+.news {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 3rem;
+	padding: 3rem $padding-global;
+	font-size: 1.25rem;
+	color: $secondary-color;
+	cursor: pointer;
+
+	&__box {
+		height: 31rem;
+		position: relative;
+		background: lighten($secondary-color, 40%);
+		padding: 4.5rem 1.5rem 0;
+		line-height: 2.2rem;
+		text-align: center;
+		@include border-radius(.5rem);
+		@include box-shadow(0, .3rem, 0, 0, darken($secondary-color, 10%));
+		border: 0.1rem solid $secondary-color;
+
+		&:hover {
+			background: $white;
+			color: $primary-color;
+			@include box-shadow(0, .3rem, 0, 0, $primary-color);
+			border: 0.1rem solid $primary-color;
+
+			.news__btn {
+				background: $primary-color;
+				@include box-shadow(0, .3rem, 0, 0, darken($primary-color, 10%));
+			}
+		}
+	}
+
+	&__title {
+		margin-top: 1.5rem;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+
+	&__text {
+		margin: 3.2rem 0 6.7rem;
+	}
+
+	&__btn {
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		margin-right: -50%;
+		margin-bottom: 14rem;
+		background: $secondary-color;
+		color: $white;
+		text-decoration: none;
+		font-size: 1.4rem;
+		font-weight: bold;
+		padding: 1.85rem 6.4rem;
+		@include border-radius(.5rem);
+		@include box-shadow(0, .3rem, 0, 0, darken($secondary-color, 10%));
+	}
+}
